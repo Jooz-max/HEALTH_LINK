@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthLink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🧠 HealthLink</h1>
+  <div id="mainMenu" class="menu">
+    <button onclick="showSection('mindful')">🧘‍♂️ Mindfulness</button>
+    <button onclick="showSection('journal')">📔 Mood Journal</button>
+    <button onclick="showSection('habits')">🥗 Healthy Habits Tracker</button>
+    <button onclick="showSection('checker')">🤖 AI Symptom Checker</button>
+    <button onclick="showSection('monitor')">🌐 IoT Health Monitor</button>
+  </div>
+
+  <!-- Mindfulness Section -->
+  <div id="mindfulSection" class="section">
+    <h2>🧘‍♀️ Mindfulness Tools</h2>
+    <p>Tap the button to begin breathing exercise.</p>
+    <div id="breathingCircle"></div>
+    <button onclick="startBreathing()">Start Breathing</button>
+    <button onclick="goHome()">⬅️ Back</button>
+  </div>
+
+  <!-- Mood Journal -->
+  <div id="journalSection" class="section">
+    <h2>📔 Mood Journal</h2>
+    <textarea rows="6" cols="40" placeholder="How are you feeling today?"></textarea><br>
+    <button>Save Entry</button>
+    <button onclick="goHome()">⬅️ Back</button>
+  </div>
+
+  <!-- Healthy Habits -->
+  <div id="habitsSection" class="section">
+    <h2>🥗 Healthy Habits Tracker</h2>
+    <ul>
+      <li><input type="checkbox"> Drink Water</li>
+      <li><input type="checkbox"> Exercise</li>
+      <li><input type="checkbox"> Sleep 8 hours</li>
+    </ul>
+    <button onclick="goHome()">⬅️ Back</button>
+  </div>
+
+  <!-- AI Symptom Checker -->
+  <div id="checkerSection" class="section">
+    <h2>🤖 AI Symptom Checker</h2>
+    <input type="text" placeholder="Enter your symptoms..."><br><br>
+    <button>Check</button>
+    <button onclick="goHome()">⬅️ Back</button>
+  </div>
+
+  <!-- IoT Health Monitor -->
+  <div id="monitorSection" class="section">
+    <h2>🌐 IoT Health Monitor</h2>
+    <p>Connect to your smart devices to monitor health in real time.</p>
+    <button onclick="goHome()">⬅️ Back</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
