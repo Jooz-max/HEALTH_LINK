@@ -24,7 +24,20 @@
     <button onclick="startBreathing()">Start Breathing</button>
     <button onclick="goHome()">⬅️ Back</button>
   </div>
-
+<h3>🌀 Mood Checker</h3>
+<select id="moodSelector" onchange="checkMood()">
+  <option value="">Select your mood</option>
+  <option value="happy">Happy</option>
+  <option value="sad">Sad</option>
+  <option value="anxious">Anxious</option>
+  <option value="calm">Calm</option>
+  <option value="angry">Angry</option>
+</select>
+<p id="moodResponse"></p>
+  <h3>🎵 Meditation + Music</h3>
+<button onclick="startMeditation()">Play Music</button>
+<button onclick="stopMeditation()">Stop Music</button>
+  
   <!-- Mood Journal -->
   <div id="journalSection" class="section">
     <h2>📔 Mood Journal</h2>
