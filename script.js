@@ -40,17 +40,27 @@ function checkMood() {
 }
 
 // Meditation music (Pixabay link)
-let meditationAudio = new Audio("https://cdn.pixabay.com/download/audio/2022/03/11/audio_b92cbf1a1d.mp3?filename=calm-meditation-11299.mp3");
-meditationAudio.loop = true;
+const meditationAudio = document.getElementById('meditationAudio');
+const meditationBtn = document.getElementById('meditationBtn');
+const meditationEmoji = document.getElementById('meditationEmoji');
 
-function startMeditation() {
-  meditationAudio.play();
+function toggleMeditation() {
+  if (meditationAudio.paused) {
+    meditationAudio.play();
+    meditationBtn.textContent = 'Pause Meditation';
+    meditationEmoji.style.display = 'block'; // show emoji
+  } else {
+    meditationAudio.pause();
+    meditationBtn.textContent = 'Start Meditation';
+    meditationEmoji.style.display = 'none'; // hide emoji
+  }
 }
 
-function stopMeditation() {
-  meditationAudio.pause();
-  meditationAudio.currentTime = 0;
-}
+// Optional: when the audio ends naturally, reset button and emoji
+meditationAudio.onended = () => {
+  meditationBtn.textContent = 'Start Meditation';
+  meditationEmoji.style.display = 'none';
+};
 
 // Breathing cycle - endless until stopped
 let breathingInterval;
