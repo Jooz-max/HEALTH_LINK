@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HealthLink</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>🧠 HealthLink</h1>
@@ -17,56 +20,64 @@
   </div>
 
   <!-- Mindfulness Section -->
-  <div id="mindfulSection" class="section">
+  <div id="mindfulSection" class="section" style="display:none;">
     <h2>🧘‍♀️ Mindfulness Tools</h2>
+
+    <!-- Breathing exercise -->
     <p>Tap the button to begin breathing exercise.</p>
     <div id="breathingCircle"></div>
     <button onclick="startBreathing()">Start Breathing</button>
+    <button onclick="stopBreathing()">Stop Breathing</button>
+
+    <!-- Mood Checker inside mindfulSection -->
+    <h3>🌀 Mood Checker</h3>
+    <select id="moodSelector" onchange="checkMood()">
+      <option value="">Select your mood</option>
+      <option value="happy">Happy</option>
+      <option value="sad">Sad</option>
+      <option value="anxious">Anxious</option>
+      <option value="calm">Calm</option>
+      <option value="angry">Angry</option>
+    </select>
+    <p id="moodResponse"></p>
+
+    <!-- Meditation + Music inside mindfulSection -->
+    <h3>🎵 Meditation + Music</h3>
+    <button onclick="startMeditation()">Play Music</button>
+    <button onclick="stopMeditation()">Stop Music</button>
+
     <button onclick="goHome()">⬅️ Back</button>
   </div>
-<h3>🌀 Mood Checker</h3>
-<select id="moodSelector" onchange="checkMood()">
-  <option value="">Select your mood</option>
-  <option value="happy">Happy</option>
-  <option value="sad">Sad</option>
-  <option value="anxious">Anxious</option>
-  <option value="calm">Calm</option>
-  <option value="angry">Angry</option>
-</select>
-<p id="moodResponse"></p>
-  <h3>🎵 Meditation + Music</h3>
-<button onclick="startMeditation()">Play Music</button>
-<button onclick="stopMeditation()">Stop Music</button>
-  
+
   <!-- Mood Journal -->
-  <div id="journalSection" class="section">
+  <div id="journalSection" class="section" style="display:none;">
     <h2>📔 Mood Journal</h2>
-    <textarea rows="6" cols="40" placeholder="How are you feeling today?"></textarea><br>
+    <textarea rows="6" cols="40" placeholder="How are you feeling today?"></textarea><br />
     <button>Save Entry</button>
     <button onclick="goHome()">⬅️ Back</button>
   </div>
 
   <!-- Healthy Habits -->
-  <div id="habitsSection" class="section">
+  <div id="habitsSection" class="section" style="display:none;">
     <h2>🥗 Healthy Habits Tracker</h2>
     <ul>
-      <li><input type="checkbox"> Drink Water</li>
-      <li><input type="checkbox"> Exercise</li>
-      <li><input type="checkbox"> Sleep 8 hours</li>
+      <li><input type="checkbox" /> Drink Water</li>
+      <li><input type="checkbox" /> Exercise</li>
+      <li><input type="checkbox" /> Sleep 8 hours</li>
     </ul>
     <button onclick="goHome()">⬅️ Back</button>
   </div>
 
   <!-- AI Symptom Checker -->
-  <div id="checkerSection" class="section">
+  <div id="checkerSection" class="section" style="display:none;">
     <h2>🤖 AI Symptom Checker</h2>
-    <input type="text" placeholder="Enter your symptoms..."><br><br>
+    <input type="text" placeholder="Enter your symptoms..." /><br /><br />
     <button>Check</button>
     <button onclick="goHome()">⬅️ Back</button>
   </div>
 
   <!-- IoT Health Monitor -->
-  <div id="monitorSection" class="section">
+  <div id="monitorSection" class="section" style="display:none;">
     <h2>🌐 IoT Health Monitor</h2>
     <p>Connect to your smart devices to monitor health in real time.</p>
     <button onclick="goHome()">⬅️ Back</button>
@@ -74,4 +85,4 @@
 
   <script src="script.js"></script>
 </body>
-</html>
+</html>￼Enter
