@@ -43,19 +43,40 @@ function checkMood() {
 const meditationAudio = document.getElementById('meditationAudio');
 const meditationBtn = document.getElementById('meditationBtn');
 const meditationEmoji = document.getElementById('meditationEmoji');
+const meditationMessage = document.getElementById('meditationMessage');
+
+const calmingMessages = [
+  "Clear your mind and breathe deeply...",
+  "Focus on the present moment...",
+  "Let go of all your worries...",
+  "Feel the calm wash over you...",
+  "Relax your body and mind...",
+  "Embrace the peaceful silence..."
+];
 
 function toggleMeditation() {
   if (meditationAudio.paused) {
     meditationAudio.play();
     meditationBtn.textContent = 'Pause Meditation';
-    meditationEmoji.style.display = 'block'; // show emoji
+    meditationEmoji.style.display = 'block';
+
+    // Pick a random calming message
+    const randomIndex = Math.floor(Math.random() * calmingMessages.length);
+    meditationMessage.textContent = calmingMessages[randomIndex];
+    meditationMessage.style.display = 'block';
   } else {
     meditationAudio.pause();
     meditationBtn.textContent = 'Start Meditation';
-    meditationEmoji.style.display = 'none'; // hide emoji
+    meditationEmoji.style.display = 'none';
+    meditationMessage.style.display = 'none';
   }
 }
 
+meditationAudio.onended = () => {
+  meditationBtn.textContent = 'Start Meditation';
+  meditationEmoji.style.display = 'none';
+  meditationMessage.style.display = 'none';
+};
 // Optional: when the audio ends naturally, reset button and emoji
 meditationAudio.onended = () => {
   meditationBtn.textContent = 'Start Meditation';
