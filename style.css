@@ -44,3 +44,20 @@ h1 {
   50% { transform: scale(1.5); }
   100% { transform: scale(1); }
 }￼Enter￼Enter
+
+#symptomJournalSection {
+  padding: 1em;
+}
+
+#symptomInput {
+  width: 90%;
+  height: 80px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
