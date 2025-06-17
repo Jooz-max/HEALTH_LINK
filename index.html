@@ -55,15 +55,15 @@ to<!DOCTYPE html>
     <button onclick="goHome()">⬅️ Back</button>
   </div>
 
-  <!-- symptoms Journal -->   
-  <h2>Symptoms Journal</h2>  
-  <textarea id="symptomInput" placeholder="Describe your symptoms..."></textarea><br>  
-  <button onclick="startVoiceInput()">🎤 Speak Symptoms</button>  
-  <button onclick="saveSymptom()">Save Entry</button>  
-  <ul id="symptomList"></ul  
-    <button>Save Entry</button>  
-    <button onclick="goHome()">⬅️ Back</button>  
-  </div>  
+  <!-- Symptoms Journal -->
+<div id="symptomJournalSection" class="section" style="display:none;">
+  <h2>Symptoms Journal</h2>
+  <textarea id="symptomInput" placeholder="Describe your symptoms..."></textarea><br>
+  <button onclick="startVoiceInput()">🎤 Speak Symptoms</button>
+  <button onclick="saveSymptom()">Save Entry</button>
+  <ul id="symptomList"></ul>
+  <button onclick="goHome()">⬅️ Back</button>
+    </div>
 
   <!-- Healthy Habits -->
   <div id="habitsSection" class="section" style="display:none;">
