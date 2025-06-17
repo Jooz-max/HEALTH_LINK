@@ -101,3 +101,27 @@ function startBreathing() {
 function stopBreathing() {
   clearInterval(breathingInterval);
   }
+function startVoiceInput() {
+  const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+  recognition.lang = 'en-US';
+  recognition.start();
+
+  recognition.onresult = function(event) {
+    const transcript = event.results[0][0].transcript;
+    document.getElementById("symptomInput").value = transcript;
+  };
+
+  recognition.onerror = function(event) {
+    alert("Voice input error: " + event.error);
+  };
+}
+
+function saveSymptom() {
+  const symptom = document.getElementById("symptomInput").value.trim();
+  if (symptom !== "") {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${new Date().toLocaleDateString()} - ${symptom}`;
+    document.getElementById("symptomList").appendChild(listItem);
+    document.getElementById("symptomInput").value = "";
+  }
+}
