@@ -115,3 +115,20 @@ function startVoiceInput() {
     alert("Voice input error: " + event.error);
   };
 }
+function showSection(sectionId) {
+  // Hide all sections
+  const sections = document.querySelectorAll(".section");
+  sections.forEach(sec => sec.style.display = "none");
+
+  // Show the requested section
+  document.getElementById(sectionId).style.display = "block";
+}
+
+function goHome() {
+  // Hide all sections
+  const sections = document.querySelectorAll(".section");
+  sections.forEach(sec => sec.style.display = "none");
+
+  // Show home section (replace 'homeSection' with your actual home div ID)
+  document.getElementById("mainMenu").style.display = "block";
+}
